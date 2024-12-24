@@ -25,13 +25,14 @@ function submit()
     {
         response.json().then(async function(newresponse)
         {
-            document.getElementById("response").innerHTML=newresponse["candidates"][0]["content"]["parts"][0]["text"];
-            await queryGetter(query,newresponse);
+            var finalres=newresponse["candidates"][0]["content"]["parts"][0]["text"];
+            document.getElementById("response").innerHTML=finalres;
+            await queryGetter(query,finalres);
         });
     });
 }
 
-const WEB_APP_URL="https://script.google.com/macros/s/AKfycbyvoOEqK9f_lf0K-66Ob5uBpvQ9p2JXT4zCw-k1jKzxf9owibxeCJWpZMsRY_EhP3J6/exec";
+const WEB_APP_URL="https://script.google.com/macros/s/AKfycbz3Kpq7kwVDorT00n-bix8OcUGuAdG34k-sgaI0FKvEDjOWnKBX_8lZQx6bObDRdHP7/exec";
 
 async function queryGetter(query,response)
 {
@@ -44,6 +45,7 @@ async function queryGetter(query,response)
             "content-type":"application/json"
         },
         method:"POST",
+        mode:"no-cors",
         redirect:"follow"
     }).then(async function(newgresp)
     {
