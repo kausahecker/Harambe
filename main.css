@@ -1,0 +1,39 @@
+body{
+    background-color:darkviolet;
+}
+#snoopy{
+    position:absolute;
+    left:10%;
+    width:30%;
+    top:10%;
+}
+#intro{
+    position:absolute;
+    left:45%;
+    width:40%;
+    top:10%;
+}
+#query{
+    position:absolute;
+    left:45%;
+    width:30%;
+    top:50%;
+}
+#submit{
+    position:absolute;
+    left:80%;
+    width:5%;
+    top:50%;
+}
+#response{
+    position:absolute;
+    left:25%;
+    width:15%;
+    top:20%;
+}
+#ps{
+    position:absolute;
+    left:45%;
+    width:30%;
+    top:80%;
+}
